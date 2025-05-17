@@ -97,3 +97,23 @@ button {
 img {
   max-width: 100%;
 }
+
+
+/* REUSABLE CSS CLASSES */
+
+.container{
+  max-width: 1300px;
+  padding-inline: 12px;
+  margin-inline: auto;
+}
+
+.text-cs{
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.shape{
+  position: absolute;
+  filter: invert(1);
+  opacity: 0.6;
+}
