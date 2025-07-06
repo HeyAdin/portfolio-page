@@ -1,2 +1,1 @@
--made this portfolio website using react
-- homepage is available now 
+Revamping portfolio with react.
