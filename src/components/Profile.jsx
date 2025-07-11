@@ -6,8 +6,9 @@ export const Profile = () => {
         <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
+            whileHover={{boxShadow:"0px 0px 200px 10px #123458 "}}
             transition={{ duration: 0.7 }}
-            className='overflow-hidden sticky relative font-Poppins w-[320px] h-[620px] border border-1-white bg-white text-black rounded-2xl flex flex-col items-center text-center gap-3 py-8 px-4 hover:shadow-md shadow-gray-700'>
+            className='overflow-hidden relative font-Poppins w-[320px] h-[620px] border border-1-white bg-white text-black rounded-2xl flex flex-col items-center text-center gap-3 py-8 px-4 hover:shadow-md shadow-gray-700'>
             <svg width="400" height="200" className='absolute top-0 left-1 z-10 overflow-hidden'>
                 <motion.path
                     d="M0 0 C  -100 700, 650 -100, 90 60 S 0 10, 100 -50"
