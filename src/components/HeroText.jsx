@@ -3,9 +3,14 @@ import { FaArrowRight, FaCode, FaDownload } from "react-icons/fa";
 import subsrciptionManager from '../assets/project1.png'
 import payGo from '../assets/project2.png'
 import { Button } from "./Button";
+import { Heading } from "./Heading";
+import { Skills } from "./Skills";
 export const HeroText = () => {
     return (
         <div className="overflow-hidden overflow-y-scroll h-screen no-scrollbar scroll-smooth">
+
+            {/* Hero Content */}
+
             <motion.div
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
@@ -26,19 +31,29 @@ export const HeroText = () => {
                 className="mb-20 w-32">
                 <Button buttonText={"Resume"} buttonIcon={<FaDownload />} />
             </motion.div>
+
+            {/* Projects Section */}
             <motion.div
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                className="font-Poppins ">
-                <h1 className="text-7xl font-[700] ">RECENT</h1>
-                <h1 className="text-[#363334] text-7xl font-[700] ">PROJECTS</h1>
-                <div className="mb-80">
+                className="font-Poppins mb-20">
+                <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
                 <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"}/>
                 <ProjectsCard image={payGo}projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"}/>
-                </div>
             </motion.div>
 
+            {/* Skills & Technologies Sections */}
+            <div className="font-Poppins mb-20">
+                <Heading headingTextWhite={"SKILLS &"} headingTextGray={"TECHNOLOGIES"} />
+                <Skills />
+            </div>
+            
+            {/* About Me Section */}
+
+            <div className="mb-80 font-Poppins">
+                <Heading headingTextWhite={"MY STORY"} headingTextGray={"SO FAR"} />
+            </div>
         </div>
     )
 }
