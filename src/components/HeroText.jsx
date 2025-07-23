@@ -39,8 +39,8 @@ export const HeroText = () => {
                 transition={{ duration: 0.7 }}
                 className="font-Poppins mb-20">
                 <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
-                <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"}/>
-                <ProjectsCard image={payGo}projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"}/>
+                <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
+                <ProjectsCard image={payGo} projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"} />
             </motion.div>
 
             {/* Skills & Technologies Sections */}
@@ -48,11 +48,14 @@ export const HeroText = () => {
                 <Heading headingTextWhite={"SKILLS &"} headingTextGray={"TECHNOLOGIES"} />
                 <Skills />
             </div>
-            
+
             {/* About Me Section */}
 
             <div className="mb-80 font-Poppins">
-                <Heading headingTextWhite={"MY STORY"} headingTextGray={"SO FAR"} />
+                <Heading headingTextWhite={"HOW I BECAME "} headingTextGray={"A DEVELOPER"} />
+                <div className="w-180 text-lg mt-10">
+                    <p>I completed my B.Tech in Electronics and Communication Engineering in 2025. While I was introduced to programming in my first year with C, it wasn’t until my third year that I seriously dove into software development. <br /> <br /> I began exploring fullstack development through YouTube videos, MDN Docs, and became part of a tech community that consistently pushed me forward. <br /> <br /> Unlike many of my peers, I never found myself truly connected to core electronics — I struggled with concepts like current and voltage, and I knew early on that my interest lay elsewhere. <br /> <br /> That disconnect led me to discover my real passion: building software.  Since then, I’ve built complete web applications from scratch, worked on strengthening my problem-solving skills through regular DSA practice, and explored modern development tools and technologies.</p>
+                </div>
             </div>
         </div>
     )
@@ -69,11 +72,12 @@ const DataCard = ({ number, title }) => {
     </motion.div>
 }
 
-const ProjectsCard = ({projectName,projectDescription,image}) => {
+const ProjectsCard = ({ projectName, projectDescription, image }) => {
     return <motion.div
         initial={{ y: 50, x: -50, scale: 0.8, opacity: 0 }}
         whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
+        viewport={{once : true}}    
         className="w-full h-45 mt-10 overflow-hidden flex items-center px-4 py-2 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
         <img className="h-40 rounded-2xl" src={image} alt="" />
         <div>
@@ -82,8 +86,8 @@ const ProjectsCard = ({projectName,projectDescription,image}) => {
                 <p className="text-md font-[500] font-Poppins text-[#868686] px-1">{projectDescription}</p>
             </div>
             <div className=" flex gap-4">
-                <Button buttonText={"Code"} buttonIcon={<FaCode />}/>
-                <Button buttonText={"Preview"} buttonIcon={<FaArrowRight />}/>
+                <Button buttonText={"Code"} buttonIcon={<FaCode />} />
+                <Button buttonText={"Preview"} buttonIcon={<FaArrowRight />} />
             </div>
         </div>
 
