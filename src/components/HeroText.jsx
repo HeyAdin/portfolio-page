@@ -5,6 +5,7 @@ import payGo from '../assets/project2.png'
 import { Button } from "./Button";
 import { Heading } from "./Heading";
 import { Skills } from "./Skills";
+import { Input } from "./Input";
 export const HeroText = () => {
     return (
         <div className="overflow-hidden overflow-y-scroll h-screen no-scrollbar scroll-smooth">
@@ -37,6 +38,7 @@ export const HeroText = () => {
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
                 className="font-Poppins mb-20">
                 <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
                 <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
@@ -51,11 +53,37 @@ export const HeroText = () => {
 
             {/* About Me Section */}
 
-            <div className="mb-80 font-Poppins">
+            <div className="mb-20 font-Poppins">
                 <Heading headingTextWhite={"HOW I BECAME "} headingTextGray={"A DEVELOPER"} />
                 <div className="w-180 text-lg mt-10">
                     <p>I completed my B.Tech in Electronics and Communication Engineering in 2025. While I was introduced to programming in my first year with C, it wasn’t until my third year that I seriously dove into software development. <br /> <br /> I began exploring fullstack development through YouTube videos, MDN Docs, and became part of a tech community that consistently pushed me forward. <br /> <br /> Unlike many of my peers, I never found myself truly connected to core electronics — I struggled with concepts like current and voltage, and I knew early on that my interest lay elsewhere. <br /> <br /> That disconnect led me to discover my real passion: building software.  Since then, I’ve built complete web applications from scratch, worked on strengthening my problem-solving skills through regular DSA practice, and explored modern development tools and technologies.</p>
                 </div>
+            </div>
+
+
+            {/* Contact Section */}
+
+            <div className="mb-80 font-Poppins">
+                <Heading headingTextWhite={"LET'S WORK"} headingTextGray={"TOGETHER"} />
+                <p className="mt-5 text-md p-2">Please contact me directly on <a className="underline" href="mailto:adinahmad003@gmail.com">adinahmad003@gmail.com</a> or through this form</p>
+                <div className="w-full mt-5 px-2">
+                    <div className="grid grid-cols-2 ">
+                        <Input inputText={"Name"} inputType={"text"} placeholderText={"John"} />
+                        <Input inputText={"Email"} inputType={"email"} placeholderText={"John@example.com"} />
+                        <div className="col-span-12 w-full">
+                            <div className="text-lg font-bold my-1 ">Your message</div>
+                            <textarea placeholder="Hey ...." rows='7' className=" w-[93%] bg-gray-700 text-white border-0 rounded-md p-2 mb-6 focus:bg-gray-600 focus:outline-none tranistion ease-in-out duration-150 placeholder-gray-300 " name="" maxLength='1000' id=""></textarea>
+                        </div>
+                    </div>
+                    <div className=" w-[300px] ">
+                        <button className="w-full bg-gradient-to-r from-[#aeaeaf] to-[#657498] text-black text-lg font-[500] py-2 px-4 rounded-md hover:bg-[#59595a] hover:to-[#40465f] transition ease-in-out duration-200 cursor-pointer">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+                
+
+
             </div>
         </div>
     )
@@ -77,7 +105,7 @@ const ProjectsCard = ({ projectName, projectDescription, image }) => {
         initial={{ y: 50, x: -50, scale: 0.8, opacity: 0 }}
         whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        viewport={{once : true}}    
+        viewport={{ once: true }}
         className="w-full h-45 mt-10 overflow-hidden flex items-center px-4 py-2 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
         <img className="h-40 rounded-2xl" src={image} alt="" />
         <div>
