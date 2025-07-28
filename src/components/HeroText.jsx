@@ -16,12 +16,12 @@ export const HeroText = () => {
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}>
-                <h1 className=" text-9xl font-[700] font-Poppins">SOFTWARE</h1>
-                <h1 className=" text-9xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
-                <p className="w-155 text-lg font-[500] text-[#868686] font-Poppins py-4 px-2" >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
+                <h1 className=" text-8xl font-[700] font-Poppins">SOFTWARE</h1>
+                <h1 className=" text-8xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
+                <p className="w-150 text-md font-[500] text-[#868686] font-Poppins py-4 px-2" >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
 
             </motion.div>
-            <div className="mt-10 flex gap-8 mb-15">
+            <div className="mt-5 flex gap-8 mb-10">
                 <DataCard number={"3+"} title={"Completed Projects"} />
                 <DataCard number={"1k+"} title={"Users visted on Project"} />
             </div>
@@ -63,22 +63,30 @@ export const HeroText = () => {
 
             {/* Contact Section */}
 
-            <div className="mb-80 font-Poppins">
+            <div className="mb-25 font-Poppins ">
                 <Heading headingTextWhite={"LET'S WORK"} headingTextGray={"TOGETHER"} />
-                <p className="mt-5 text-md p-2">Please contact me directly on <a className="underline" href="mailto:adinahmad003@gmail.com">adinahmad003@gmail.com</a> or through this form</p>
-                <div className="w-full mt-5 px-2">
-                    <div className="grid grid-cols-2 ">
+                <p className="mt-3 text-sm p-2">Please contact me directly on <a className="underline" href="mailto:adinahmad003@gmail.com">adinahmad003@gmail.com</a> or through this form</p>
+                <div className="w-full  px-2">
+                    <div className="flex justify-center gap-20 w-[90%]">
                         <Input inputText={"Name"} inputType={"text"} placeholderText={"John"} />
                         <Input inputText={"Email"} inputType={"email"} placeholderText={"John@example.com"} />
-                        <div className="col-span-12 w-full">
-                            <div className="text-lg font-bold my-1 ">Your message</div>
-                            <textarea placeholder="Hey ...." rows='7' className=" w-[93%] bg-gray-700 text-white border-0 rounded-md p-2 mb-6 focus:bg-gray-600 focus:outline-none tranistion ease-in-out duration-150 placeholder-gray-300 " name="" maxLength='1000' id=""></textarea>
-                        </div>
                     </div>
+                     <div className="w-[97%]">
+                            <div className="text-md font-bold  ">Your message</div>
+                            <textarea placeholder="Hey ...." rows='7' className=" w-[93%] bg-gray-700 text-white border-0 rounded-md p-2 mb-2 focus:bg-gray-600 focus:outline-none tranistion ease-in-out duration-150 placeholder-gray-300 " name="" maxLength='1000' id=""></textarea>
+                        </div>
                     <div className=" w-[300px] ">
-                        <button className="w-full bg-gradient-to-r from-[#aeaeaf] to-[#657498] text-black text-lg font-[500] py-2 px-4 rounded-md hover:bg-[#59595a] hover:to-[#40465f] transition ease-in-out duration-200 cursor-pointer">
+                        {/* <button className="w-full bg-gradient-to-r from-[#aeaeaf] to-[#657498] text-black text-md font-[500] py-2 px-4 rounded-md hover:bg-[#59595a] hover:to-[#40465f] transition ease-in-out duration-200 cursor-pointer">
                             Submit
-                        </button>
+                        </button> */}
+                        <motion.button
+                            initial={{opacity:0, y :30}}
+                            whileInView={{opacity:1 , y:0}}
+                            whileHover={{ boxShadow:"0px 0px 20px 0px white"}}
+                            transition={{duration:0.3}}
+                            viewport={{once : true}}
+                                className="border border-gray-700 mx-4 my-2 hover:bg-[#1C1A19] items-center px-6 py-2 rounded-xl cursor-pointer w-[70%]"> Submit
+                                </motion.button>
                     </div>
                 </div>
             </div>
@@ -92,7 +100,7 @@ const DataCard = ({ number, title }) => {
         animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
         className="max-w-30  text-center">
-        <h1 className="text-6xl font-Poppins font-[600] mb-2">{number}</h1>
+        <h1 className="text-5xl font-Poppins font-[600] mb-2">{number}</h1>
         <p className="text-md font-[500] font-Poppins text-[#868686]">{title}</p>
     </motion.div>
 }
@@ -103,12 +111,12 @@ const ProjectsCard = ({ projectName, projectDescription, image }) => {
         whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="w-full h-45 mt-10 overflow-hidden flex items-center px-4 py-2 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
-        <img className="h-40 rounded-2xl" src={image} alt="" />
+        className="w-[80%] h-40 mt-10 overflow-hidden flex items-center px-4 py-2 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
+        <img className="h-35 rounded-2xl" src={image} alt="" />
         <div>
-            <div className="w-120 mb-4">
-                <h1 className="text-2xl font-bold mb-3">{projectName}</h1>
-                <p className="text-md font-[500] font-Poppins text-[#868686] px-1">{projectDescription}</p>
+            <div className="w-100 mb-4">
+                <h1 className="text-xl font-bold mb-3">{projectName}</h1>
+                <p className="text-sm font-[500] font-Poppins text-[#868686] px-1">{projectDescription}</p>
             </div>
             <div className=" flex gap-4">
                 <Button buttonText={"Code"} buttonIcon={<FaCode />} />
