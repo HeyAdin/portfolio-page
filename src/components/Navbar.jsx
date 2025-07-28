@@ -37,9 +37,10 @@ export const Navbar = () => {
     }]
 
     return <div className=" flex justify-center items-center">
-        <motion.div initial={{
-            scale: 0,
-        }}
+        <motion.div
+            initial={{
+                scale: 0,
+            }}
             animate={{
                 scale: 1,
             }}

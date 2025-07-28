@@ -81,9 +81,6 @@ export const HeroText = () => {
                         </button>
                     </div>
                 </div>
-                
-
-
             </div>
         </div>
     )
