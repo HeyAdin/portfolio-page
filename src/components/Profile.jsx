@@ -8,8 +8,8 @@ export const Profile = () => {
             animate={{ scale: 1, opacity: 1 }}
             whileHover={{boxShadow:"0px 0px 200px 10px #123458 "}}
             transition={{ duration: 0.7 }}
-            className='overflow-hidden relative font-Poppins w-[320px] h-[620px] border border-1-white bg-white text-black rounded-2xl flex flex-col items-center text-center gap-3 py-8 px-4 hover:shadow-md shadow-gray-700'>
-            <svg width="400" height="200" className='absolute top-0 left-1 z-10 overflow-hidden'>
+            className='overflow-hidden relative font-Poppins lg:w-[270px] lg:h-[550px] border border-1-white bg-white text-black rounded-2xl flex flex-col items-center text-center gap-3 py-7 px-4 hover:shadow-md shadow-gray-700'>
+            <svg width="400" height="200" className='absolute -top-3 left-1 z-10 overflow-hidden'>
                 <motion.path
                     d="M0 0 C  -100 700, 650 -100, 90 60 S 0 10, 100 -50"
                     stroke="#D4C9BE"
@@ -21,17 +21,17 @@ export const Profile = () => {
                     transition={{ duration: 1, ease: "easeInOut" }}
                 />
             </svg>
-            <img className='mb-2 bg-gradient-to-t from-[#12375f] via-[#103052] to-[#0f2f50] w-60 rounded-2xl object-cover h-70' src={profilePic} alt="profileImage" />
+            <img className='mb-2 bg-gradient-to-t from-[#12375f] via-[#103052] to-[#0f2f50] w-55 rounded-2xl object-cover lg:h-60' src={profilePic} alt="profileImage" />
             <motion.h1
                 initial={{ scale: 0.7, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className='font-[700] text-4xl mb-6'>Adin Ahmad</motion.h1>
+                className='font-[700] text-4xl mb-4'>Adin Ahmad</motion.h1>
             <motion.p
                 initial={{ scale: 0.7, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className='mb-2 z-10 text-[17px] font-[500] text-gray-500'>Electronics by degree, full-stack developer by passion — building complete web applications from scratch.</motion.p>
+                className='mb-3 z-10 text-[17px] font-[500] text-gray-500'>Electronics by degree, full-stack developer by passion — building complete web applications from scratch.</motion.p>
             <svg width="400" height="200" className='absolute bottom-0 right-4 z-9 overflow-hidden scale-y-[-1] scale-x-[-1]'>
                 <motion.path
                     d="M0 0 C  -100 700, 650 -100, 90 60 S 0 10, 100 -50"

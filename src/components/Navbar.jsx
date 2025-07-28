@@ -46,7 +46,7 @@ export const Navbar = () => {
             }}
             transition={{
                 duration: 0.4
-            }} className=" bg-[#1C1A19]  flex items-center justify-center p-3 px-5 list-none gap-10 rounded-3xl">
+            }} className=" bg-[#1C1A19] flex items-center justify-center p-3 px-3 lg:px-5 list-none gap-7 lg:gap-10 rounded-3xl">
             {
                 navList.map((item, index) => (
                     <motion.div

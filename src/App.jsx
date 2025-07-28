@@ -6,9 +6,9 @@ import { Profile } from './components/Profile'
 function App() {
 
   return (
-    <div className='text-white  bg-[#151312] pt-3 h-dvh overflow-hidden'>
+    <div className='text-white  bg-[#151312] pt-3 h-[740px] '>
       <Navbar />
-      <div className='flex justify-center gap-28 my-20'>
+      <div className='lg:flex lg:justify-center lg:gap-25 lg:mt-18 max-h-[740px] overflow-hidden bg-[#151312]'>
         <Profile />
         <HeroText />
       </div>
