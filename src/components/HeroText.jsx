@@ -8,7 +8,7 @@ import { Skills } from "./Skills";
 import { Input } from "./Input";
 export const HeroText = () => {
     return (
-        <div className="overflow-hidden overflow-y-scroll h-screen no-scrollbar scroll-smooth">
+        <div className="overflow-hidden overflow-y-scroll h-screen no-scrollbar scroll-smooth mask-b-from-50% ">
 
             {/* Hero Content */}
 
@@ -16,12 +16,12 @@ export const HeroText = () => {
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}>
-                <h1 className=" text-8xl font-[700] font-Poppins">SOFTWARE</h1>
-                <h1 className=" text-8xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
-                <p className="w-150 text-md font-[500] text-[#868686] font-Poppins py-4 px-2" >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
+                <h1 className="xl:text-6xl 2xl:text-8xl font-[700] font-Poppins">SOFTWARE</h1>
+                <h1 className=" 2xl:text-8xl xl:text-6xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
+                <p className="xl:w-120 2xl:w-150 2xl:text-lg xl:text-[14px] font-[500] text-[#868686] font-Poppins 2xl:py-4 xl:py-3 px-2" >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
 
             </motion.div>
-            <div className="mt-5 flex gap-8 mb-10">
+            <div className="2xl:mt-5 xl:mt-3 flex 2xl:gap-8 xl:gap-4 2xl:mb-10 xl:mb-7">
                 <DataCard number={"3+"} title={"Completed Projects"} />
                 <DataCard number={"1k+"} title={"Users visted on Project"} />
             </div>
@@ -29,7 +29,7 @@ export const HeroText = () => {
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                className="mb-20 w-32">
+                className="2xl:mb-20 xl:mb-10  2xl:w-34 xl:w-32">
                 <Button buttonText={"Resume"} buttonIcon={<FaDownload />} />
             </motion.div>
 
@@ -99,9 +99,9 @@ const DataCard = ({ number, title }) => {
         initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
         animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="max-w-30  text-center">
-        <h1 className="text-5xl font-Poppins font-[600] mb-2">{number}</h1>
-        <p className="text-md font-[500] font-Poppins text-[#868686]">{title}</p>
+        className="2xl:w-30 xl:w-25  text-center">
+        <h1 className="2xl:text-5xl xl:text-4xl font-Poppins font-[600] 2xl:mb-2 xl:mb-1">{number}</h1>
+        <p className="2xl:text-lg xl:text-[12px] font-[500] font-Poppins text-[#868686]">{title}</p>
     </motion.div>
 }
 
@@ -111,12 +111,12 @@ const ProjectsCard = ({ projectName, projectDescription, image }) => {
         whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="w-[80%] h-40 mt-10 overflow-hidden flex items-center px-4 py-2 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
-        <img className="h-35 rounded-2xl" src={image} alt="" />
+        className="w-[80%] 2xl:h-40 xl:h-27 2xl:mt-10 xl:mt-7 overflow-hidden flex items-center 2xl:px-4  xl:px-3 2xl:py-2 xl:py-1 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
+        <img className="2xl:h-35 xl:h-25 rounded-2xl" src={image} alt="" />
         <div>
-            <div className="w-100 mb-4">
-                <h1 className="text-xl font-bold mb-3">{projectName}</h1>
-                <p className="text-sm font-[500] font-Poppins text-[#868686] px-1">{projectDescription}</p>
+            <div className="2xl:w-100 xl:w-70 mb-4">
+                <h1 className="2xl:text-xl xl:text-sm font-bold 2xl:mb-3 xl:mb-1">{projectName}</h1>
+                <p className="2xl:text-sm xl:text-[10px] font-[500] font-Poppins text-[#868686] px-1">{projectDescription}</p>
             </div>
             <div className=" flex gap-4">
                 <Button buttonText={"Code"} buttonIcon={<FaCode />} />
