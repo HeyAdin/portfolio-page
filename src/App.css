@@ -17,5 +17,6 @@
 
 #root{
   height: 100vh;
-  background-color: #151312;
+  /* background-color: #151312; */
+  background-image: linear-gradient(to right, blue, green);
 }
