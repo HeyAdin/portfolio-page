@@ -63,7 +63,7 @@ const skills = [{
 export const Skills = () => {
     
     return <div>
-        <div className="grid grid-cols-2 mt-10">
+        <div className="grid grid-cols-2 2xl:mt-10 xl:mt-5 ">
             {skills.map((skill,index)=>{
                 return <div key={index}>
                     <SkillsCard image={skill.img} skillsTitle={skill.title} skillsSubtitle={skill.subTitle} />

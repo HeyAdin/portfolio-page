@@ -8,7 +8,7 @@ export const Profile = () => {
             animate={{ scale: 1, opacity: 1 }}
             whileHover={{boxShadow:"0px 0px 200px 10px #123458 "}}
             transition={{ duration: 0.7 }}
-            className='overflow-hidden relative font-Poppins lg:w-[235px] lg:h-[420px] 2xl:w-[320px] 2xl:h-[600px] bg-white text-black 2xl:rounded-2xl lg:rounded-xl flex flex-col items-center text-center 2xl:gap-3 xl:gap-1 2xl:py-7 xl:py-4 2xl:px-4 xl:px-3 hover:shadow-md shadow-gray-700'>
+            className='overflow-hidden relative font-Poppins lg:w-[235px] lg:h-[420px] 2xl:w-[320px] 2xl:h-[600px] bg-white text-black 2xl:rounded-2xl lg:rounded-xl flex flex-col items-center text-center 2xl:gap-3 xl:gap-1 2xl:py-7 xl:py-4 2xl:px-4 xl:px-3 hover:shadow-md shadow-gray-700 '>
             <svg width="400" height="200" className='absolute 2xl:-top-3 xl:-top-8 left-1 z-10 overflow-hidden'>
                 <motion.path
                     d="M0 0 C  -100 700, 650 -100, 90 60 S 0 10, 100 -50"
