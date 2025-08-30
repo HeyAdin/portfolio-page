@@ -46,24 +46,39 @@ export const HeroText = () => {
             </motion.div>
 
             {/* Skills & Technologies Sections */}
-            <div className="font-Poppins mb-20">
+            <motion.div
+                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="font-Poppins mb-20">
                 <Heading headingTextWhite={"SKILLS &"} headingTextGray={"TECHNOLOGIES"} />
                 <Skills />
-            </div>
+            </motion.div>
 
             {/* About Me Section */}
 
-            <div className="2xl:mb-20 xl:mb-30 font-Poppins">
+            <motion.div
+                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="2xl:mb-20 xl:mb-30 font-Poppins">
                 <Heading headingTextWhite={"HOW I BECAME "} headingTextGray={"A DEVELOPER"} />
                 <div className="2xl:w-180 xl:w-120 2xl:text-lg xl:text-[12px] mt-10">
                     <p>I completed my B.Tech in Electronics and Communication Engineering in 2025. While I was introduced to programming in my first year with C, it wasn’t until my third year that I seriously dove into software development. <br /> <br /> I began exploring fullstack development through YouTube videos, MDN Docs, and became part of a tech community that consistently pushed me forward. <br /> <br /> Unlike many of my peers, I never found myself truly connected to core electronics — I struggled with concepts like current and voltage, and I knew early on that my interest lay elsewhere. <br /> <br /> That disconnect led me to discover my real passion: building software.  Since then, I’ve built complete web applications from scratch, worked on strengthening my problem-solving skills through regular DSA practice, and explored modern development tools and technologies.</p>
                 </div>
-            </div>
+            </motion.div>
 
 
             {/* Contact Section */}
 
-            <div className="2xl:mb-70 xl:mb-45 font-Poppins ">
+            <motion.div
+                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="2xl:mb-70 xl:mb-45 font-Poppins ">
                 <Heading headingTextWhite={"LET'S WORK"} headingTextGray={"TOGETHER"} />
                 <p className="2xl:mt-3 xl:mt-1 2xl:text-sm xl:text-[12px] 2xl:p-2 xl:p-[8px]">Please contact me directly on <a className="underline" href="mailto:adinahmad003@gmail.com">adinahmad003@gmail.com</a> or through this form</p>
                 <div className="w-full  px-2">
@@ -89,7 +104,7 @@ export const HeroText = () => {
                         </motion.button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
@@ -109,9 +124,13 @@ const ProjectsCard = ({ projectName, projectDescription, image }) => {
     return <motion.div
         initial={{ y: 50, x: -50, scale: 0.8, opacity: 0 }}
         whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+        whileHover={{
+            y: -5,
+            transition: { duration: 0.3, ease: "linear" },
+        }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="w-[80%] 2xl:h-40 xl:h-27 2xl:mt-10 xl:mt-7 overflow-hidden flex items-center 2xl:px-4  xl:px-3 2xl:py-2 xl:py-1 transform hover:-translate-y-1 duration-300 gap-5 hover:bg-[#1C1A19] rounded-2xl">
+        className="w-[80%] 2xl:h-40 xl:h-27 2xl:mt-10 xl:mt-7 overflow-hidden flex items-center 2xl:px-4  xl:px-3 2xl:py-2 xl:py-1  gap-5 hover:bg-[#1C1A19] rounded-2xl">
         <img className="2xl:h-35 xl:h-25 rounded-2xl" src={image} alt="" />
         <div>
             <div className="2xl:w-100 xl:w-70 mb-4">
