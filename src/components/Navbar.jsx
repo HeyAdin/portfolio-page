@@ -46,7 +46,7 @@ export const Navbar = () => {
             }}
             transition={{
                 duration: 0.4
-            }} className=" bg-[#1C1A19] flex items-center justify-center lg:px-4 xl:py-2 2xl:py-4 2xl:px-6 list-none gap-7 xl:gap-7 2xl:gap-12 rounded-3xl">
+            }} className=" bg-[#1C1A19] flex items-center justify-center py-2 lg:py-3 xl:py-2 2xl:py-4 px-3 lg:px-5 xl:px-4 2xl:px-6 list-none gap-7 xl:gap-7 2xl:gap-12 rounded-3xl">
             {
                 navList.map((item, index) => (
                     <motion.div
@@ -59,7 +59,7 @@ export const Navbar = () => {
                         transition={{
                             duration: 1
                         }} key={index} className="relative group flex flex-col justify-center items-center">
-                        <div className="text-white cursor-pointer group-hover:text-[#93b1d1] xl:size-5">{item.icon}</div>
+                        <div className="text-white cursor-pointer group-hover:text-[#93b1d1] size-5">{item.icon}</div>
                         <div className="absolute  mb-2 2xl:left-4 2xl:top-7 xl:left-2/4 xl:top-4/4 -translate-x-1/2 text-white 2xl:text-sm xl:text-[10px] font-bold px-2 py-1 rounded 
                           opacity-0 group-hover:opacity-100 transition-all 
                           duration-400 whitespace-nowrap z-1 scale-0 group-hover:scale-90 group-hover:text-[#93b1d1]">

@@ -8,12 +8,12 @@ const cn = (...classes) => classes.join(" ");
 function App() {
 
   return (
-    <div className={cn('text-white bg-[#151312] pt-3 h-screen 2xl:h-screen overflow-hidden relative',
-      'bg-[radial-gradient(var(--color-neutral-800)_0.5px,transparent_1px)]',
+    <div className={cn('text-white bg-[#151312] pt-3 md:h-screen 2xl:h-screen md:overflow-hidden relative',
+      'bg-[radial-gradient(var(--color-neutral-700)_0.5px,transparent_1px)]',
       '[background-size:10px_10px]'
     )}>
       <Navbar />
-      <div className={cn('lg:flex xl:justify-center xl:gap-20 lg:mt-10 2xl:gap-40 2xl:pt-15 bg-gradient-to-t from-[#333130] to-[#151312] mask-b-from-50%',
+      <div className={cn('flex flex-col items-center justify-center md:items-start md:flex md:flex-row md:justify-center lg:mt-10 md:gap-15 lg:gap-20 2xl:gap-40 2xl:pt-15 lg:pt-0 pt-10 bg-gradient-to-t from-[#333130] to-[#151312] mask-b-from-50%',
       'bg-[radial-gradient(1px,transparent_1px)]',
       '[background-size:10px_10px]')}>
         <Profile />
