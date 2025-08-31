@@ -40,7 +40,7 @@ export const HeroText = () => {
                 whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="font-Poppins md:mb-20 mb-10">
+                className="font-Poppins lg:mb-20 mb-10">
                 <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
                 <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
                 <ProjectsCard image={payGo} projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"} />
@@ -52,7 +52,7 @@ export const HeroText = () => {
                 whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="font-Poppins mb-20">
+                className="font-Poppins xl:mb-20 mb-10">
                 <Heading headingTextWhite={"SKILLS &"} headingTextGray={"TECHNOLOGIES"} />
                 <Skills />
             </motion.div>
@@ -64,9 +64,9 @@ export const HeroText = () => {
                 whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="2xl:mb-20 xl:mb-30 font-Poppins">
+                className="2xl:mb-20 xl:mb-30 font-Poppins mb-10">
                 <Heading headingTextWhite={"HOW I BECAME "} headingTextGray={"A DEVELOPER"} />
-                <div className="2xl:w-180 xl:w-120 2xl:text-lg xl:text-[12px] mt-10">
+                <div className="2xl:w-180 xl:w-120 md:w-100 2xl:text-lg md:text-[12px] text-[11px] xl:mt-10 mt-5">
                     <p>I completed my B.Tech in Electronics and Communication Engineering in 2025. While I was introduced to programming in my first year with C, it wasn’t until my third year that I seriously dove into software development. <br /> <br /> I began exploring fullstack development through YouTube videos, MDN Docs, and became part of a tech community that consistently pushed me forward. <br /> <br /> Unlike many of my peers, I never found myself truly connected to core electronics — I struggled with concepts like current and voltage, and I knew early on that my interest lay elsewhere. <br /> <br /> That disconnect led me to discover my real passion: building software.  Since then, I’ve built complete web applications from scratch, worked on strengthening my problem-solving skills through regular DSA practice, and explored modern development tools and technologies.</p>
                 </div>
             </motion.div>
