@@ -13,7 +13,7 @@ function App() {
       '[background-size:10px_10px]'
     )}>
       <Navbar />
-      <div className={cn('flex flex-col items-center justify-center md:items-start md:flex md:flex-row md:justify-center lg:mt-10 md:gap-15 lg:gap-20 2xl:gap-40 2xl:pt-15 lg:pt-0 pt-10 bg-gradient-to-t from-[#333130] to-[#151312] mask-b-from-50%',
+      <div className={cn('flex flex-col items-center justify-center md:items-start md:flex md:flex-row md:justify-center lg:pt-10 md:gap-15 lg:gap-20 2xl:gap-40 2xl:pt-15 pt-10 bg-gradient-to-t from-[#333130] to-[#151312] mask-b-from-50%',
       'bg-[radial-gradient(1px,transparent_1px)]',
       '[background-size:10px_10px]')}>
         <Profile />

@@ -8,20 +8,21 @@ import { Skills } from "./Skills";
 import { Contact } from "./Contact";
 export const HeroText = () => {
     return (
-        <div className="md:overflow-hidden md:overflow-y-scroll md:h-screen h-full no-scrollbar md:scroll-smooth md:mask-b-from-50% mask-b-from-100% 2xl:w-200 xl:w-150 lg:w-100 md:w-90 w-full">
+        <div className=" px-5 md:px-0 md:overflow-hidden md:overflow-y-scroll md:h-screen h-full no-scrollbar md:scroll-smooth md:mask-b-from-50% mask-b-from-100% 2xl:w-200 xl:w-150 lg:w-130 md:w-110 w-full md:mt-0 mt-10">
 
             {/* Hero Content */}
 
             <motion.div
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
-                transition={{ duration: 0.7 }}>
-                <h1 className="md:text-5xl lg:text-6xl 2xl:text-8xl font-[700] font-Poppins">SOFTWARE</h1>
-                <h1 className=" 2xl:text-8xl lg:text-6xl md:text-5xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
-                <p className="xl:w-120 2xl:w-150 2xl:text-lg lg:text-[14px] md:text-[12px] font-[500] text-[#868686] font-Poppins 2xl:py-4 xl:py-3 md:py-3 md:px-1 " >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
+                transition={{ duration: 0.7 }}
+                className="md:block flex flex-col items-center">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl font-[700] font-Poppins">SOFTWARE</h1>
+                <h1 className=" 2xl:text-8xl lg:text-6xl md:text-5xl text-4xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
+                <p className="xl:w-120 2xl:w-150 2xl:text-lg lg:text-[14px] md:text-[13px] text-[12px] font-[500] text-[#868686] font-Poppins 2xl:py-4 xl:py-3 md:py-3 py-4 md:px-1 " >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
 
             </motion.div>
-            <div className="2xl:mt-5 xl:mt-3 flex 2xl:gap-8 xl:gap-4 2xl:mb-10 xl:mb-7">
+            <div className="2xl:mt-5 xl:mt-3 md:my-5 my-4 flex 2xl:gap-8 xl:gap-4 lg:gap-4 md:gap-2 gap-5 2xl:mb-10 xl:mb-7 lg:mb-6" >
                 <DataCard number={"3+"} title={"Completed Projects"} />
                 <DataCard number={"1k+"} title={"Users visted on Project"} />
             </div>
@@ -29,7 +30,7 @@ export const HeroText = () => {
                 initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
                 animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                className="2xl:mb-20 xl:mb-10  2xl:w-34 xl:w-25">
+                className="2xl:mb-20 xl:mb-10 lg:mb-8 md:mb-7 mb-6  2xl:w-34 lg:w-25 md:w-22 w-24">
                 <Button buttonText={"Resume"} buttonIcon={<FaDownload />} />
             </motion.div>
 
@@ -39,7 +40,7 @@ export const HeroText = () => {
                 whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
-                className="font-Poppins mb-20">
+                className="font-Poppins md:mb-20 mb-10">
                 <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
                 <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
                 <ProjectsCard image={payGo} projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"} />
@@ -81,9 +82,9 @@ const DataCard = ({ number, title }) => {
         initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
         animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="2xl:w-30 xl:w-25  text-center">
-        <h1 className="2xl:text-5xl xl:text-4xl font-Poppins font-[600] 2xl:mb-2 xl:mb-1">{number}</h1>
-        <p className="2xl:text-lg xl:text-[12px] font-[500] font-Poppins text-[#868686]">{title}</p>
+        className="2xl:w-30 xl:w-25 lg:w-23 w-23 text-center">
+        <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl text-3xl font-Poppins font-[600] 2xl:mb-2 xl:mb-1 lg:mb-1 mb-[2px]">{number}</h1>
+        <p className="2xl:text-lg xl:text-[12px] lg:text-[12px] text-[12px] font-[500] font-Poppins text-[#868686]">{title}</p>
     </motion.div>
 }
 
@@ -97,14 +98,14 @@ const ProjectsCard = ({ projectName, projectDescription, image }) => {
         }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="w-[80%] 2xl:h-40 xl:h-27 2xl:mt-10 xl:mt-7 overflow-hidden flex items-center 2xl:px-4  xl:px-3 2xl:py-2 xl:py-1  gap-5 hover:bg-[#1C1A19] rounded-2xl">
-        <img className="2xl:h-35 xl:h-25 rounded-2xl" src={image} alt="" />
+        className="lg:w-[80%] 2xl:h-40 xl:h-27 lg:h-25 2xl:mt-10 xl:mt-7 lg:mt-5 overflow-hidden flex items-center 2xl:px-4 xl:px-3 lg:px-2 px-2 2xl:py-2 py-1  gap-5 hover:bg-[#1C1A19] rounded-2xl">
+        <img className="2xl:h-35 xl:h-25 h-25 rounded-2xl" src={image} alt="" />
         <div>
-            <div className="2xl:w-100 xl:w-70 mb-4">
-                <h1 className="2xl:text-xl xl:text-sm font-bold 2xl:mb-3 xl:mb-1">{projectName}</h1>
-                <p className="2xl:text-sm xl:text-[10px] font-[500] font-Poppins text-[#868686] px-1">{projectDescription}</p>
+            <div className="2xl:w-100 xl:w-70 lg:w-60 mb-4 lg:mb-1 xl:mb-4">
+                <h1 className="2xl:text-xl xl:text-sm lg:text-[12px] text-[12px] font-bold 2xl:mb-3 xl:mb-1">{projectName}</h1>
+                <p className="2xl:text-sm xl:text-[10px] lg:text-[11px] text-[11px] font-[500] font-Poppins text-[#868686]">{projectDescription}</p>
             </div>
-            <div className=" flex 2xl:gap-4">
+            <div className=" flex 2xl:gap-4 lg:gap-2 gap-2">
                 <Button buttonText={"Code"} buttonIcon={<FaCode />} />
                 <Button buttonText={"Preview"} buttonIcon={<FaArrowRight />} />
             </div>
