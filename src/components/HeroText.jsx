@@ -107,7 +107,7 @@ const DataCard = ({ number, title }) => {
     </motion.div>
 }
 
-const ProjectsCard = ({ projectName, projectDescription, image }) => {
+export const ProjectsCard = ({ projectName, projectDescription, image }) => {
     return <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

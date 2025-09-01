@@ -2,6 +2,7 @@ import './App.css'
 import { Navbar } from './components/Navbar'
 import { Dashboard } from './pages/Dashboard';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { Project } from './pages/Project';
 
 const cn = (...classes) => classes.join(" ");
 
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route element={<Dashboard/>} path='/home'/>
+        <Route element={<Project/>} path='/projects'/>
       </Routes>
       </BrowserRouter>
     </div>
