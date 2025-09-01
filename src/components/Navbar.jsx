@@ -40,9 +40,11 @@ export const Navbar = () => {
         <motion.div
             initial={{
                 scale: 0,
+                y: 10
             }}
             animate={{
                 scale: 1,
+                y: 0
             }}
             transition={{
                 duration: 0.4
@@ -52,12 +54,14 @@ export const Navbar = () => {
                     <motion.div
                         initial={{
                             scale: 0,
+                            y: 10
                         }}
                         animate={{
                             scale: 1,
+                            y: 0
                         }}
                         transition={{
-                            duration: 1
+                            duration: 0.7
                         }} key={index} className="relative group flex flex-col justify-center items-center">
                         <div className="text-white cursor-pointer group-hover:text-[#93b1d1] size-5">{item.icon}</div>
                         <div className="absolute  mb-2 2xl:left-4 2xl:top-7 xl:left-2/4 xl:top-4/4 -translate-x-1/2 text-white 2xl:text-sm xl:text-[10px] font-bold px-2 py-1 rounded 

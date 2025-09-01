@@ -13,32 +13,48 @@ export const HeroText = () => {
             {/* Hero Content */}
 
             <motion.div
-                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
-                animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 className="md:block flex flex-col items-center">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl font-[700] font-Poppins">SOFTWARE</h1>
-                <h1 className=" 2xl:text-8xl lg:text-6xl md:text-5xl text-4xl font-[700] font-Poppins text-[#363334]">DEVELOPER</h1>
-                <p className="xl:w-120 2xl:w-150 2xl:text-lg lg:text-[14px] md:text-[13px] text-[12px] font-[500] text-[#868686] font-Poppins 2xl:py-4 xl:py-3 md:py-3 py-4 md:px-1 " >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</p>
+                <motion.h1
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl font-[700] font-Poppins">SOFTWARE</motion.h1>
+                <motion.h1
+                    initial={{ y: 120, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className=" 2xl:text-8xl lg:text-6xl md:text-5xl text-4xl font-[700] font-Poppins text-[#363334]">DEVELOPER</motion.h1>
+                <motion.p
+                    initial={{ y: 150, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="xl:w-120 2xl:w-150 2xl:text-lg lg:text-[14px] md:text-[13px] text-[12px] font-[500] text-[#868686] font-Poppins 2xl:py-4 xl:py-3 md:py-3 py-4 md:px-1 " >I’m passionate about building fullstack applications that solve real problems. Always exploring new technologies and turning ideas into clean, usable products</motion.p>
 
             </motion.div>
-            <div className="2xl:mt-5 xl:mt-3 md:my-5 my-4 flex 2xl:gap-8 xl:gap-4 lg:gap-4 md:gap-2 gap-5 2xl:mb-10 xl:mb-7 lg:mb-6" >
+            <motion.div
+                initial={{ y: 170, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="2xl:mt-5 xl:mt-3 md:my-5 my-4 flex 2xl:gap-8 xl:gap-4 lg:gap-4 md:gap-2 gap-5 2xl:mb-10 xl:mb-7 lg:mb-6" >
                 <DataCard number={"3+"} title={"Completed Projects"} />
                 <DataCard number={"1k+"} title={"Users visted on Project"} />
-            </div>
+            </motion.div>
             <motion.div
-                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
-                animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
-                transition={{ duration: 0.7 }}
+                initial={{ y: 190, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
                 className="2xl:mb-20 xl:mb-10 lg:mb-8 md:mb-7 mb-6  2xl:w-34 lg:w-25 md:w-22 w-24">
                 <Button buttonText={"Resume"} buttonIcon={<FaDownload />} />
             </motion.div>
 
             {/* Projects Section */}
             <motion.div
-                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
-                whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
-                transition={{ duration: 0.7 }}
+                initial={{ y: 200, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 0.7 }}
+                transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 className="font-Poppins lg:mb-20 mb-10">
                 <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
@@ -60,15 +76,18 @@ export const HeroText = () => {
             {/* About Me Section */}
 
             <motion.div
-                initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
-                whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
                 className="2xl:mb-20 xl:mb-30 font-Poppins mb-10">
                 <Heading headingTextWhite={"HOW I BECAME "} headingTextGray={"A DEVELOPER"} />
-                <div className="2xl:w-180 xl:w-120 md:w-100 2xl:text-lg md:text-[12px] text-[11px] xl:mt-10 mt-5">
+                <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.7 }}
+                    className="2xl:w-180 xl:w-120 md:w-100 2xl:text-lg md:text-[12px] text-[11px] xl:mt-10 mt-5">
                     <p>I completed my B.Tech in Electronics and Communication Engineering in 2025. While I was introduced to programming in my first year with C, it wasn’t until my third year that I seriously dove into software development. <br /> <br /> I began exploring fullstack development through YouTube videos, MDN Docs, and became part of a tech community that consistently pushed me forward. <br /> <br /> Unlike many of my peers, I never found myself truly connected to core electronics — I struggled with concepts like current and voltage, and I knew early on that my interest lay elsewhere. <br /> <br /> That disconnect led me to discover my real passion: building software.  Since then, I’ve built complete web applications from scratch, worked on strengthening my problem-solving skills through regular DSA practice, and explored modern development tools and technologies.</p>
-                </div>
+                </motion.div>
             </motion.div>
 
             {/* Contact Section */}
@@ -79,8 +98,8 @@ export const HeroText = () => {
 
 const DataCard = ({ number, title }) => {
     return <motion.div
-        initial={{ y: -50, x: -50, scale: 0.8, opacity: 0 }}
-        animate={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
         className="2xl:w-30 xl:w-25 lg:w-23 w-23 text-center">
         <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl text-3xl font-Poppins font-[600] 2xl:mb-2 xl:mb-1 lg:mb-1 mb-[2px]">{number}</h1>
@@ -90,13 +109,13 @@ const DataCard = ({ number, title }) => {
 
 const ProjectsCard = ({ projectName, projectDescription, image }) => {
     return <motion.div
-        initial={{ y: 50, x: -50, scale: 0.8, opacity: 0 }}
-        whileInView={{ y: 0, x: 0, scale: 1, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         whileHover={{
             y: -5,
             transition: { duration: 0.3, ease: "linear" },
         }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
         className="lg:w-[80%] 2xl:h-40 xl:h-27 lg:h-25 2xl:mt-10 xl:mt-7 lg:mt-5 overflow-hidden flex items-center 2xl:px-4 xl:px-3 lg:px-2 px-2 2xl:py-2 py-1  gap-5 hover:bg-[#1C1A19] rounded-2xl">
         <img className="2xl:h-35 xl:h-25 h-25 rounded-2xl" src={image} alt="" />
