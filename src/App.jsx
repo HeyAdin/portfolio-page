@@ -3,6 +3,10 @@ import { Navbar } from './components/Navbar'
 import { Dashboard } from './pages/Dashboard';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { Project } from './pages/Project';
+import { SkillsSection } from './pages/SkillsSection';
+import { About } from './pages/About';
+import { ContactMe } from './pages/ContactMe';
+import { EmptyPage } from './pages/EmptyPage';
 
 const cn = (...classes) => classes.join(" ");
 
@@ -18,6 +22,10 @@ function App() {
       <Routes>
         <Route element={<Dashboard/>} path='/home'/>
         <Route element={<Project/>} path='/projects'/>
+        <Route element={<SkillsSection/>} path='/skills'/>
+        <Route element={<About/>} path='/about-me'/>
+        <Route element={<ContactMe/>} path='/contact-me'/>
+        <Route element={<EmptyPage />} path='*' />
       </Routes>
       </BrowserRouter>
     </div>

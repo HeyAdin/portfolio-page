@@ -17,8 +17,12 @@ export const Project = () => {
                 whileInView={{ y: 0, opacity: 0.7 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="font-Poppins lg:mb-20 mb-10">
+                className="font-Poppins xl:mb-70 md:mb-50 mb-20">
                 <Heading headingTextWhite={"RECENT"} headingTextGray={"PROJECTS"} />
+                <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
+                <ProjectsCard image={payGo} projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"} />
+                <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
+                <ProjectsCard image={payGo} projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"} />
                 <ProjectsCard image={subsrciptionManager} projectName={"Subscription Manager"} projectDescription={"Forgot which subscriptions to cancel and you paid it unkowingly Dont worry we will handle this"} />
                 <ProjectsCard image={payGo} projectName={"PayGo"} projectDescription={"A digital wallet to send and recieve money from your friends and family"} />
             </motion.div>
