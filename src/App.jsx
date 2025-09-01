@@ -1,7 +1,7 @@
 import './App.css'
 import { Navbar } from './components/Navbar'
 import { Dashboard } from './pages/Dashboard';
-
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 const cn = (...classes) => classes.join(" ");
 
@@ -12,8 +12,12 @@ function App() {
       'bg-[radial-gradient(var(--color-neutral-700)_0.5px,transparent_1px)]',
       '[background-size:10px_10px]'
     )}>
+      <BrowserRouter>
       <Navbar />
-      <Dashboard />
+      <Routes>
+        <Route element={<Dashboard/>} path='/home'/>
+      </Routes>
+      </BrowserRouter>
     </div>
 
   )

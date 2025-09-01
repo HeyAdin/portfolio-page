@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useNavigate } from 'react-router-dom';
 export const Navbar = () => {
     const navList = [{
         icon: <li className="transform hover:scale-130 duration-300 hover:cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.7" stroke="currentColor" className="2xl:size-7 xl:size-5">
@@ -34,7 +35,13 @@ export const Navbar = () => {
         </svg>
         </li>,
         title: "Contact me"
-    }]
+    }];
+    const navigate = useNavigate();
+    function handleOnClick(item) {
+        const routeName = "/" + item.title.toLowerCase().split(" ").join("-");
+        console.log(routeName);
+        navigate(routeName)
+    }
 
     return <div className=" flex justify-center items-center ">
         <motion.div
@@ -62,7 +69,11 @@ export const Navbar = () => {
                         }}
                         transition={{
                             duration: 0.7
-                        }} key={index} className="relative group flex flex-col justify-center items-center">
+                        }}
+                        onClick={() => {
+                            handleOnClick(item)
+                        }}
+                        key={index} className="relative group flex flex-col justify-center items-center">
                         <div className="text-white cursor-pointer group-hover:text-[#93b1d1] size-5">{item.icon}</div>
                         <div className="absolute  mb-2 2xl:left-4 2xl:top-7 xl:left-2/4 xl:top-4/4 -translate-x-1/2 text-white 2xl:text-sm xl:text-[10px] font-bold px-2 py-1 rounded 
                           opacity-0 group-hover:opacity-100 transition-all 
